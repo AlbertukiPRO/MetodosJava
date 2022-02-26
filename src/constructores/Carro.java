@@ -22,6 +22,17 @@ public class Carro {
         System.out.println("Gracias por tu compra, pague.");
     }
 
+
+    @Override
+    public String toString() {
+        return "Carro{" +
+                "modelo=" + modelo +
+                ", color='" + color + '\'' +
+                ", marca='" + marca + '\'' +
+                ", precio=" + precio +
+                ", venta=" + venta +
+                '}';
+    }
 }
 
 
@@ -29,11 +40,12 @@ class Cliente {
     public static void main(String[] args) {
         Carro obt = new Carro(2010,"negro","Nissan",128000);
         Scanner scanner = new Scanner(System.in);
-
+        System.out.println(obt.toString());
         System.out.println("Precio del auto $"+obt.precio);
         boolean isCompra = scanner.nextBoolean();
         if (isCompra){
             obt.VenderAuto();
+            System.out.println(obt.toString());
         }else{
             System.out.println("Adios");
         }
