@@ -2,7 +2,7 @@ package POO;
 
 abstract class Figura {
     String nombre; //Herencia
-    abstract public void area(); //Polimorfismo y Herencia
+    public abstract void area(); //Polimorfismo y Herencia
     abstract public void showData();
 }
 
